@@ -8,13 +8,10 @@ services:
     networks:
       - actual-budget-network
     environment:
-      # see all options and more details at https://actualbudget.github.io/docs/Installing/Configuration
       - ACTUAL_HTTPS_KEY=/data/selfhost.key
       - ACTUAL_HTTPS_CERT=/data/selfhost.crt
       - ACTUAL_PORT=5006
     volumes:
-      # './actual-data' below to the path of the folder you want Actual to store its data in on your server.
-      # '/data' is the path Actual will look for its files in by default, so leave that as-is.
       - ./actual-data:/data
 networks:
   actual-budget-network:
