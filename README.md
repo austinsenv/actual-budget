@@ -5,8 +5,6 @@
 
 After cloning the repository, make a new directory called `actual-data`. This directory will be mounted to the container and is where Actual will store its data. 
 
-Create the network with `docker network create actual-budget-network`.
-
 The docker compose configuration provided in this repository assumes you are going to connect to Actual from outside of the local host. If this is the case, you'll need to create a `selfhost.crt` and `.selfhost.key` for enabling HTTPS (see below). If you are going to access Actual from localhost, those lines in the 'environment' section of `docker-compose.yml` will need to be removed. 
 #### Setting up your self signed certificate to enable HTTPS
 Creating a self signed certificate can be pretty complex, and there are several ways to do so. This way utilizes the [openssl](https://packages.debian.org/bookworm/openssl) package normally installed on Linux distributions. 
