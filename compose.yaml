@@ -15,4 +15,3 @@ services:
       - ./actual-data:/data
 networks:
   actual-budget-network:
-    external: true
